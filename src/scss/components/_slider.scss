@@ -1,0 +1,38 @@
+.slider {
+  background-color: alpha($color: #000000);
+  position: fixed;
+  right: 0;
+  top: calc(50% - 200px);
+  z-index: 10;
+
+  @include big-desktop {
+    display: none;
+  }
+
+  &__list {
+    margin-right: 80px;
+  }
+
+  &__item {
+    padding: 20px 32px 20px 0px;
+    border-right: 3px solid;
+    border-color: rgba(#FFFFFF, .5);
+    text-align: right;
+
+    &--active {
+      border-color: rgba(#FFFFFF, 1);
+      transition: border-color 0.5s ease-in-out;
+    }
+  }
+
+  &__link {
+
+    text-align: right;
+    font-family: "Gilroy", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--light-color);
+  }
+}

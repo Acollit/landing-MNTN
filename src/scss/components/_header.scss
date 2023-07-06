@@ -1,0 +1,83 @@
+.header {
+  position: absolute;
+  padding: 60px 0;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__account {
+    position: relative;
+    padding-left: 32px;
+    font-size: 17px;
+    font-family: Gilroy, sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--light-color);
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/account.svg);
+      width: 24px;
+      height: 24px;
+      left: 0;
+    }
+  }
+}
+
+.logo {
+
+
+  &__letter {
+
+    font-size: 32px;
+    font-family: Chronicle Display, sans-serif;
+
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    text-transform: capitalize;
+    color: var(--light-color);
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    margin-right: 50px;
+
+    @include small-tablet {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
+      @include small-tablet {
+        margin-right: 20px;
+      }
+
+    }
+  }
+
+  &__link {
+    font-family: Gilroy, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--light-color);
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+  }
+}

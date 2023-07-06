@@ -1,0 +1,131 @@
+.hero {
+  z-index: 2;
+  background-image: url(../img/hero-bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: 260px;
+
+
+  &__bg {
+    position: absolute;
+    margin-top: 200px;
+    z-index: 2;
+    background-image: url(../img/hero-bg-1.png);
+    background-repeat: no-repeat;
+    height: 1440px;
+    width: 100%;
+
+
+
+    &--2 {
+      position: absolute;
+      margin-top: 490px;
+      z-index: 3;
+      background-image: url(../img/hero-bg-2.png);
+      background-position: top;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+
+      @include tablet {
+        background-position: -325px 0px;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-bottom: 600px;
+    z-index: 10;
+    margin: 0 auto;
+    max-width: 955px;
+
+    @include tablet {
+      max-width: 655px;
+    }
+
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 88px;
+    font-family: Chronicle Display, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100px;
+    text-transform: capitalize;
+    color: var(--wei, #FFF);
+
+    @include big-desktop {
+      font-size: 70px;
+    }
+
+    @include tablet {
+      font-size: 60px;
+    }
+
+    @include small-tablet {
+      font-size: 45px;
+    }
+  }
+
+  &__socials {
+    position: absolute;
+    padding-top: 365px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+
+    @include big-desktop {
+      display: none;
+    }
+
+
+
+  }
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__follow {
+    transform: rotate(90deg);
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--light-color);
+  }
+
+  &__btn {
+    position: relative;
+    padding-right: 30px;
+    font-size: 18px;
+    font-family: Gilroy, sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--light-color);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 24px;
+      background-image: url(../img/arrow.svg);
+      background-repeat: no-repeat;
+      right: 0;
+    }
+  }
+}
