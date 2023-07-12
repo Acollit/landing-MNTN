@@ -1,13 +1,15 @@
 .content {
+  background-color: #0B1D26;
 
 
   &__wrapper {
     background-color: #0B1D26;
+    padding-bottom: 200px;
+    margin-bottom: -2px;
   }
 
   &__box {
     position: relative;
-
     padding-top: 200px;
     z-index: 3;
     display: flex;
@@ -18,11 +20,6 @@
       padding-top: 50px;
     }
 
-    &:last-child {
-      padding-bottom: 200px;
-
-
-    }
 
     &--two {
       @include small-tablet {
@@ -66,6 +63,7 @@
   }
 
   &__title {
+    margin: 0;
     position: relative;
     z-index: 10;
     margin-bottom: 27px;
@@ -85,6 +83,7 @@
   }
 
   &__text {
+    margin: 0;
     margin-bottom: 27px;
     font-family: "Gilroy", sans-serif;
     font-size: 18px;

@@ -5,6 +5,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
   }
 
   &__inner {
@@ -12,10 +13,17 @@
       display: flex;
       gap: 200px;
       justify-content: space-between;
+
       @include small-tablet {
         gap: 50px;
       }
+
+      @include mobile {
+        gap: 15px;
+      }
     }
+
+
   }
 
   &__logo {
@@ -24,6 +32,7 @@
   }
 
   &__descr {
+    margin: 0;
     margin-bottom: 122px;
     max-width: 305px;
     font-family: "Gilroy", sans-serif;
@@ -36,9 +45,15 @@
     @include small-tablet {
       font-size: 14px;
     }
+
+    @include mobile {
+      font-size: 12px;
+      max-width: 250px;
+    }
   }
 
   &__copyright {
+    margin: 0;
     opacity: 0.5;
     font-size: 18px;
     font-family: "Gilroy", sans-serif;
@@ -50,9 +65,14 @@
     @include small-tablet {
       font-size: 14px;
     }
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 
   &__subtitle {
+    margin: 0;
     margin-bottom: 24px;
     font-family: "Gilroy", sans-serif;
     font-size: 24px;
@@ -62,6 +82,10 @@
 
     @include small-tablet {
       font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 14px;
     }
   }
 
@@ -74,6 +98,10 @@
 
     @include small-tablet {
       font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
     }
   }
 

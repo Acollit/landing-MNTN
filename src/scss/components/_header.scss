@@ -18,10 +18,6 @@
     line-height: normal;
     color: var(--light-color);
 
-    @include small-tablet {
-      font-size: 16px;
-    }
-
     &::before {
       content: '';
       position: absolute;
@@ -29,6 +25,32 @@
       width: 24px;
       height: 24px;
       left: 0;
+      top: -2px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__btn {
+    display: none;
+    background-image: url(../img/menu.svg);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 21px;
+    z-index: 14;
+    transition: all .3s ease-in-out;
+    @include mobile {
+      display: block;
+    }
+    &.burger--active {
+      background-image: url(../img/close.svg);
+
     }
   }
 }
@@ -50,6 +72,10 @@
 }
 
 .nav {
+  @include mobile {
+    display: none;
+  }
+
   &__list {
     display: flex;
     margin-right: 50px;
@@ -62,6 +88,7 @@
   &__item {
     &:not(:last-child) {
       margin-right: 40px;
+
       @include small-tablet {
         margin-right: 20px;
       }
