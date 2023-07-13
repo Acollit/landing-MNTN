@@ -2,13 +2,30 @@
   background-color: #0B1D26;
   padding-bottom: 120px;
 
+  @include mobile {
+    padding-bottom: 60px;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      gap: 50px;
+    }
   }
 
   &__inner {
+
+    &--one {
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
     &--two {
       display: flex;
       gap: 200px;
@@ -20,6 +37,7 @@
 
       @include mobile {
         gap: 15px;
+        justify-content: space-around;
       }
     }
 
@@ -47,6 +65,8 @@
     }
 
     @include mobile {
+      text-align: center;
+      margin-bottom: 60px;
       font-size: 12px;
       max-width: 250px;
     }

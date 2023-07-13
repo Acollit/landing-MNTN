@@ -7,6 +7,12 @@
   padding-top: 260px;
 
 
+  &__container {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--content-haeder-width);
+  }
+
   &__bg {
     position: absolute;
     margin-top: 200px;
@@ -18,7 +24,7 @@
 
 
 
-    &--2 {
+    &-2 {
       position: absolute;
       margin-top: 490px;
       z-index: 3;

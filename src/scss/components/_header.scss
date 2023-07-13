@@ -3,6 +3,12 @@
   padding: 60px 0;
   width: 100%;
 
+  &__container {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--content-haeder-width);
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -45,9 +51,11 @@
     height: 21px;
     z-index: 14;
     transition: all .3s ease-in-out;
+
     @include mobile {
       display: block;
     }
+
     &.burger--active {
       background-image: url(../img/close.svg);
 
